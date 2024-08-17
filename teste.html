@@ -3,20 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teste</title>
-    <script>
-        // Função para definir um cookie
-        function setCookie(name, value, days) {
-            let expires = "";
-            if (days) {
-                const date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    <title>Recepção de Cookie</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-
-        // Função para obter um cookie
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content {
+            margin-bottom: 20px;
+        }
+        .content p {
+            font-size: 18px;
+            margin: 10px 0;
+        }
+        .cookie-display {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+    <script>
+        // Função para obter o valor de um cookie
         function getCookie(name) {
             const nameEQ = name + "=";
             const ca = document.cookie.split(';');
@@ -28,36 +49,23 @@
             return null;
         }
 
-        // Função para mostrar cookies e definir o cookie "memo"
-        function mostrarCookies() {
-            // Define o cookie "memo" com um valor
-            setCookie('memo', 'Valor definido na visita', 7); // Expira em 7 dias
-
-            // Obtém todos os cookies disponíveis
-            const cookies = document.cookie;
-            
-            // Exibe um alerta com os cookies
-            alert('Cookies do usuário: ' + cookies);
-            
-            // Imprime os cookies no console
-            console.log('Cookies do usuário: ' + cookies);
-            
-            // Atualiza o conteúdo da div com os cookies
-            document.getElementById('cookieDisplay').textContent = 'Cookies do usuário: ' + cookies;
-
-            // Exibe o valor do cookie "memo"
+        // Função para mostrar o valor do cookie "memo"
+        function mostrarMemoCookie() {
             const memoValue = getCookie('memo');
-            document.getElementById('memoDisplay').textContent = 'Valor do cookie "memo": ' + memoValue;
+            document.getElementById('memoDisplay').textContent = 'Valor do cookie "memo": ' + (memoValue ? memoValue : 'Nenhum valor encontrado');
         }
         
         // Executa a função quando a página é carregada
-        window.onload = mostrarCookies;
+        window.onload = mostrarMemoCookie;
     </script>
 </head>
 <body>
-    <h1>Bem-vindo!</h1>
-    <p>Os cookies do seu navegador serão exibidos abaixo.</p>
-    <div id="cookieDisplay">Aqui aparecerão os cookies.</div>
-    <div id="memoDisplay">Aqui aparecerá o valor do cookie "memo".</div>
+    <div class="container">
+        <h1>Recepção de Cookie</h1>
+        <div class="content">
+            <p>O valor do cookie "memo" do administrador será exibido abaixo:</p>
+            <div id="memoDisplay" class="cookie-display">Aguardando cookie...</div>
+        </div>
+    </div>
 </body>
 </html>

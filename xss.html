@@ -3,25 +3,79 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Exemplo de Cookies</title>
-    <script>
-        function mostrarCookies() {
-            // Obtém todos os cookies disponíveis
-            const cookies = document.cookie;
-            
-            // Exibe um alerta com os cookies
-            alert('Cookies do usuário: ' + cookies);
-            
-            // Imprime os cookies no console
-            console.log('Cookies do usuário: ' + cookies);
+    <title>Contador de Visitas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background-color: #f4f4f4;
         }
-        
+        .container {
+            max-width: 600px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        .content {
+            font-size: 18px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+    <script>
+        // Função para obter o valor de um cookie
+        function getCookie(name) {
+            const nameEQ = name + "=";
+            const ca = document.cookie.split(';');
+            for (let i = 0; i < ca.length; i++) {
+                let c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1);
+                if (c.indexOf(nameEQ) === 0) return parseInt(c.substring(nameEQ.length), 10);
+            }
+            return 0;
+        }
+
+        // Função para definir um cookie
+        function setCookie(name, value, days) {
+            let expires = "";
+            if (days) {
+                const date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        // Função para incrementar e exibir o contador
+        function updateCounter() {
+            // Obtém o valor atual do cookie
+            let count = getCookie('visitCount');
+            
+            // Incrementa o contador
+            count = count + 1;
+            
+            // Define o cookie atualizado
+            setCookie('visitCount', count, 365); // Expira em 365 dias
+            
+            // Exibe o contador na página
+            document.getElementById('visitCount').textContent = `Número de visitas: ${count}`;
+        }
+
         // Executa a função quando a página é carregada
-        window.onload = mostrarCookies;
+        window.onload = updateCounter;
     </script>
 </head>
 <body>
-    <h1>Bem-vindo!</h1>
-    <p>Os cookies do seu navegador serão exibidos em um alerta e no console.</p>
+    <div class="container">
+        <h1>Contador de Visitas</h1>
+        <div id="visitCount" class="content">Número de visitas: 0</div>
+    </div>
 </body>
 </html>

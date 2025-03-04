@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zé webpage</title>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+    <div class="cs-progress-bar">
+        <div style="width: 0%" class="bars" id="progress-bar"></div>
+    </div>
+    
+    <div id="content" class="hidden">
+        <div class="main-title">
+            <h1>Welcome!</h1>
+        </div>
+        <div class="cs-tabs">
+            <input class="radiotab" name="tabs" tabindex="1" type="radio" id="tabone" checked="checked" />
+            <label class="label" for="tabone">Main</label>
+            <div class="panel" tabindex="1">
+                <h2>Hi, my name is Jose</h2>
+                <img src="/assets/zeca.jpg" class="profile-img">
+                <p>but you can call me "Ze". I'm a 19 years old programmer and Information Systems undergraduate at University of Sao Paulo.</p>
+            </div>
+            <input class="radiotab" tabindex="1" name="tabs" type="radio" id="tabtwo" />
+            <label class="label" for="tabtwo">About me</label>
+            <div class="panel" tabindex="1">
+                <p>I am currently 19 years old, a programmer and an undergraduate student in Information Systems at the University of São Paulo. I am involved in some extracurricular groups involving Open Source, Cybersecurity and Competitive Programming, you can check them out by clicking <a href="#" id="open-dialog-link">here</a>. I also like Metal, Blockbuster Movies, Club Penguin, Valve, ID Software (especially Doom), Guitar Hero and Devil May Cry. <br>Favorite languages ​​at the moment: C++ and Python</p>
+            </div>
+            <input class="radiotab" tabindex="1" name="tabs" type="radio" id="tabthree" />
+            <label class="label" for="tabthree">Social</label>
+            <div class="panel" tabindex="1">
+                <h2>Some Social Networks</h2>
+                <button onclick="window.open('https://x.com/josesinho181')">Twitter</button> - My Twitter Account
+                <br>
+                <button onclick="window.open('https://www.steamcommunity.com/id/whereisportal3')">Steam</button> - My Steam Account
+                <br>
+                <button onclick="window.open('https://www.linkedin.com/in/jos%C3%A9-guilherme-santos-riberto-0603b9287/')">Linkedin</button> - My Linkedin Account
+                <br>
+                <button onclick="window.open('https://www.instagram.com/zeguilherme_/')">Instagram</button> - My Instagram Account
+                <br>
+                <p>And if you need to send an email, you can find me at jose.riberto@usp.br</p>
+            </div>
+        </div>
+        <dialog class="cs-dialog">
+            <form method="dialog">
+                <div class="heading">
+                    <div class="wrapper">
+                        <div class="icon"></div>
+                        <p class="text">Options</p>
+                    </div>
+                    <button class="cs-btn close"></button>
+                </div>
+                <div class="content">
+                    <a href="https://ganesh.icmc.usp.br/">Ganesh</a> - Cybersecurity Extracurricular Group
+                    <br>
+                    <a href="https://gelos.club/">Gelos</a> - Libre/Open Source Extracurricular Group
+                    <br>
+                    <a href="http://gema.icmc.usp.br/">GEMA</a> - Competitive Programming Extracurricular Group
+                </div>
+                <menu class="footer-btns">
+                    <button class="cs-btn">OK</button>
+                    <button class="cs-btn">Cancel</button>
+                    <button class="cs-btn">Apply</button>
+                </menu>
+            </form>
+        </dialog>
+        <div class="footer">
+            <p>Made with love by Ze <3 - 2025</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> 
+
+</body>
+</html>

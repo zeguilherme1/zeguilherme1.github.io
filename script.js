@@ -18,4 +18,4 @@ const interval = setInterval(function(){
         content.classList.remove('hidden');
         progressBar.parentElement.classList.add('hidden');
     }
-}, 150);
+}, 100);

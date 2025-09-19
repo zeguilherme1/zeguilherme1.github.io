@@ -1,17 +1,19 @@
 body {
     font-size: 20px;
 }
+
 .main-title {
-    margin: 0 auto; 
+    margin: 0 auto;
     position: absolute;
     top: 10%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
+
 .cs-tabs {
     max-width: 700px;
-    width: 80%; 
-    margin: 0 auto; 
+    width: 80%;
+    margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -20,7 +22,11 @@ body {
 
 .panel {
     padding: 10px;
-    text-align: center; 
+    text-align: center;
+    font-family: "Jersey 15", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 23px;
 }
 
 .label {
@@ -33,6 +39,7 @@ body {
     display: block;
     margin: 20px auto;
 }
+
 .footer {
     font-size: 16px;
     text-align: center;
@@ -41,13 +48,15 @@ body {
     bottom: 0;
     width: 100%;
 }
-.cs-progress-bar{ 
-    margin: 0 auto; 
+
+.cs-progress-bar {
+    margin: 0 auto;
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
 }
-.hidden{
+
+.hidden {
     display: none;
 }

@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,29 +8,60 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/ekmas/cs16.css@main/css/cs16.min.css">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="icon" type="image/x-icon" href="/assets/lambda.jpg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Comic+Neue:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Jersey+15&display=swap"
+        rel="stylesheet">
 
 </head>
+
 <body>
     <div class="cs-progress-bar">
         <div style="width: 0%" class="bars" id="progress-bar"></div>
     </div>
-    
+
     <div id="content" class="hidden">
-        <div class="main-title">
-            <h1>Welcome!</h1>
-        </div>
         <div class="cs-tabs">
             <input class="radiotab" name="tabs" tabindex="1" type="radio" id="tabone" checked="checked" />
             <label class="label" for="tabone">Main</label>
             <div class="panel" tabindex="1">
                 <h2>Hi, my name is Jose</h2>
                 <img src="/assets/zeca.jpg" class="profile-img">
-                <p>but you can call me "Ze". I'm a 19 years old programmer and Information Systems undergraduate at University of Sao Paulo.</p>
+                <p>but you can call me "Ze". I'm a 19 years old programmer and Information Systems undergraduate at
+                    University of Sao Paulo.</p>
             </div>
             <input class="radiotab" tabindex="1" name="tabs" type="radio" id="tabtwo" />
             <label class="label" for="tabtwo">About me</label>
             <div class="panel" tabindex="1">
-                <p>I am currently 19 years old, a programmer and an undergraduate student in Information Systems at the University of São Paulo. I am involved in some extracurricular groups involving Open Source, Cybersecurity and Competitive Programming, you can check them out by clicking <a href="#" id="open-dialog-link">here</a>. I also like Metal, Blockbuster Movies, Club Penguin, Valve, ID Software (especially Doom), Guitar Hero and Devil May Cry. <br>Favorite languages ​​at the moment: C++ and Python</p>
+                <p>I am currently 19 years old, a programmer and an undergraduate student in Information Systems at the
+                    University of São Paulo. I am involved in some extracurricular groups involving Open Source,
+                    Cybersecurity and Competitive Programming, you can check them out by clicking <a href="#"
+                        id="open-dialog-link">here</a>. I also like Metal, Blockbuster Movies, Club Penguin, Valve, ID
+                    Software (especially Doom), Guitar Hero and Devil May Cry.</p>
+            </div>
+            <input class="radiotab" tabindex="4" name="tabs" type="radio" id="tabfour" />
+            <label class="label" for="tabfour">About CS</label>
+            <div class="panel" tabindex="4">
+                <p>
+                    This section is dedicated to some of my hobbies and personal projects in my university and life.
+                    <br><br>
+                    I am currently doing undergraduate research as a Software Engineer at CIERMAG, located at the
+                    Institute of Physics.
+                    During this research, my goal is to refactor a Python framework called PyMR. This framework is used
+                    to program and
+                    manage NMR machines.
+                    <br><br>
+                    As I mentioned, I am involved in Competitive Programming. This year I started studying it as a hobby
+                    and I am loving it.
+                    This year, I participated in two programming contests: the São Paulo Programming Marathon and the
+                    Brazilian Sub-regional Phase.
+                    We qualified for the Brazilian Finals, which will take place in November 2025.
+                    <br><br>
+                    My favorite programming languages at the moment are Python and C++, and the next language I want to
+                    learn is Haskell.
+                </p>
+
             </div>
             <input class="radiotab" tabindex="1" name="tabs" type="radio" id="tabthree" />
             <label class="label" for="tabthree">Social</label>
@@ -37,13 +69,19 @@
                 <h2>Some Social Networks</h2>
                 <button onclick="window.open('https://x.com/josesinho181')">Twitter</button> - My Twitter Account
                 <br>
-                <button onclick="window.open('https://www.steamcommunity.com/id/whereisportal3')">Steam</button> - My Steam Account
+                <button onclick="window.open('https://www.steamcommunity.com/id/whereisportal3')">Steam</button> - My
+                Steam Account
                 <br>
-                <button onclick="window.open('https://www.linkedin.com/in/jos%C3%A9-guilherme-santos-riberto-0603b9287/')">Linkedin</button> - My Linkedin Account
+                <button
+                    onclick="window.open('https://www.linkedin.com/in/jos%C3%A9-guilherme-santos-riberto-0603b9287/')">Linkedin</button>
+                - My Linkedin Account
                 <br>
-                <button onclick="window.open('https://www.instagram.com/zeguilherme_/')">Instagram</button> - My Instagram Account
+                <button onclick="window.open('https://www.instagram.com/zeguilherme_/')">Instagram</button> - My
+                Instagram Account
                 <br>
-                <p>And if you need to send an email, you can find me at jose.riberto@usp.br</p>
+                <p>
+                    And if you need to send an email, you can find me at jose.riberto@usp.br
+                </p>
             </div>
         </div>
         <dialog class="cs-dialog">
@@ -74,7 +112,8 @@
         </div>
     </div>
 
-    <script src="script.js"></script> 
+    <script src="script.js"></script>
 
 </body>
+
 </html>

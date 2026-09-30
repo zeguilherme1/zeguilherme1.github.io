@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>zé blog</title>
+    <link rel="stylesheet" type="text/css" href="../css/blog.css" />
+  </head>
+
+  <body>
+    <div class="title-gif">
+      <img src="../assets/computer.gif" style="width: 240px; height: 240px" />
+    </div>
+
+    <div class="title">
+      	<h1>blog do zé gui</h1>
+    </div>
+
+    <div class="container">
+ 		<p class="subtitle">Computação e algumas outras coisas.</p>
+
+      	<article>
+				<h2>30/09/2026</h2>
+			  	<h2>O novo bug do milênio?</h2>
+				<p>
+					O bug do milênio foi um problema previsto para ocorrer em todos os sistemas na passagem do ano 1999 para 2000. O bug era causado pelo armazenamento de anos com apenas dois dígitos em sistemas antigos, uma prática que visava a economia de memória, visto que apenas 2 caracteres (1 byte por caractere) eram utilizados na representação ao invés de 4 caracteres.
+				<br>
+				<br>
+					Durante esse período, diversas pessoas temimam esse bug, a mídia sensacionalista dizia que o mundo iria colapsar, bancos quebrariam e que tudo de ruim iria acontecer no mundo, o que no final das contas foi um grande exagero.
+
+				<br>
+				<br>
+				Recentemente eu estava surfando na web e me deparei com um post na wikipedia sobre um bug que vai rolar em 2038, achei interessante e resolvi escrever sobre esse bug.
+
+				<br>
+				<br>
+				Basicamente, em diversos sistemas UNIX o tipo de dados time_t é setado sendo um inteiro de 32 bits do tipo signed, ou seja, com sinal, o grande problema é que esse tipo conta cada segundo desde a meia-noite do dia 1º de janeiro de 1970.
+				<br>
+				<br>
+				Cada segundo acrescenta +1 dentro dessa variável que armazena a data do sistema. O range de uma variável inteira de 32 bits vai de -2147483648 até 2147483647, ou seja, um pouco mais de 2 bilhões de segundos.
+				<br>
+				<br>
+				Acho que já deu pra deduzir onde isso vai chegar, basicamente no dia 19 de janeiro de 2038, às 03:14:08 AM, essa variável vai estourar, atingindo o seu limite e sendo resetada para o valor -2147483648, o ínicio do range de valores de uma varíavel inteira de 32 bits.
+				<br>
+				<br>
+				É claro que esse bug não tem a escala atual do que foi o bug do milênio, acabei conhecendo isso por acaso enquanto scrollava a internet, o bug do milênio era divulgado até na TV xD. Mas mesmo assim, acho que muitos bancos ainda utilizam sistemas UNIX legado (Os que ainda trabalham com COBOL? cof cof).
+				<br>
+				<br>
+				Acho engraçado ver como a tecnologia evoluiu e evolui todos os dias, nos anos 70 ninguém tinha a preocupação de "essa variável vai estourar quando chegarmos em 2038?", é interessante ver como esse tipo de caso pode ter (ou não) passado batido durante testes e/ou modelagem do software.
+
+				<br>
+				<br>
+				Uma coisa é certa no final das contas: mesmo se ainda não tivermos o skate voador de De Volta Para o Futuro em 2038, teremos variáveis de sistemas UNIX estourando e um carinha que escreveu sobre isso em 2026 ;) 
+				</p>
+      </article>
+    </div>
+  </body>
+</html>
